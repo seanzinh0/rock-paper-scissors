@@ -8,6 +8,19 @@
 		<title>Rock Paper Scissors</title>
 	</head>
 	<body>
+		<h1 class="title">Rock Paper Scissors</h1>
+		<div class="modal-flex">
+			<div id="modal">
+				<div class="username-input">
+					<h2>Enter a User Name</h2>
+					<input type="text" id="username" placeholder="Username" />
+					<div class="button-wrapper__modal">
+						<button id="submit-user">Submit User Name</button>
+						<button id="cont-guest">Continue as Guest</button>
+					</div>
+				</div>
+			</div>
+		</div>
 		<div class="flex-wrapper">
 			<div class="player-wrapper">
 				<div id="bot">
@@ -24,27 +37,29 @@
 					<p id="user-choice">You chose:</p>
 				</div>
 			</div>
-			<table class="score-counter">
-				<tr>
-					<th>Mr. Robot's Score</th>
-					<td id="robot-score">0</td>
-				</tr>
-				<tr>
-					<th>Your Score</th>
-					<td id="user-score">0</td>
-				</tr>
-				<tr>
-					<th>Ties</th>
-					<td id="tie-count">0</td>
-				</tr>
-			</table>
+			<div class="score-counter">
+				<div class="score-wrapper">
+					<h2>Mr. Robot's Score:</h2>
+					<p id="robot-score">0</p>
+				</div>
+				<div class="score-wrapper">
+					<h2>Your Score:</h2>
+					<p id="user-score">0</p>
+				</div>
+				<div class="score-wrapper">
+					<h2>Ties:</h2>
+					<p id="tie-count">0</p>
+				</div>
+			</div>
 		</div>
 		<div class="reset-wrapper">
-			<button>Reset</button>
+			<button id="reset-btn">Reset</button>
 		</div>
-		<div class="winner-message">
-			<h1>Who Won?</h1>
-			<p id="winner">The winner is:</p>
+		<div class="winner-wrapper">
+			<div class="winner-message">
+				<h1>Who Won?</h1>
+				<p id="winner"></p>
+			</div>
 		</div>
 	</body>
 </html>

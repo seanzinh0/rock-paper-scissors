@@ -7,6 +7,11 @@ const winner = document.getElementById("winner");
 const robotScore = document.getElementById("robot-score");
 const userScore = document.getElementById("user-score");
 const tieCount = document.getElementById("tie-count");
+const resetBtn = document.getElementById("reset-btn");
+const playerName = document.getElementById("guest");
+const username = document.getElementById("username").value;
+const submitUsername = document.getElementById("submit-user");
+const continueAsGuest = document.getElementById("cont-guest");
 
 const robot = {
 	choices: ["Rock", "Paper", "Scissors"],
@@ -42,6 +47,7 @@ rock.addEventListener("click", () => {
 	robotChoice.innerHTML = "Mr Robot chose: " + robotSelect;
 	if (userSelect === robotSelect) {
 		winner.innerHTML = "Tie";
+		incrementTie();
 	} else if (robotSelect === "Paper") {
 		winner.innerHTML = "Mr. Robot Won!";
 		robot.incrementScore();
@@ -58,6 +64,7 @@ paper.addEventListener("click", () => {
 	robotChoice.innerHTML = "Mr Robot chose: " + robotSelect;
 	if (userSelect === robotSelect) {
 		winner.innerHTML = "Tie";
+		incrementTie();
 	} else if (robotSelect === "Scissors") {
 		winner.innerHTML = "Mr. Robot Won!";
 		robot.incrementScore();
@@ -74,6 +81,7 @@ scissors.addEventListener("click", () => {
 	robotChoice.innerHTML = "Mr Robot chose: " + robotSelect;
 	if (userSelect === robotSelect) {
 		winner.innerHTML = "Tie";
+		incrementTie();
 	} else if (robotSelect === "Rock") {
 		winner.innerHTML = "Mr. Robot Won!";
 		robot.incrementScore();
@@ -81,4 +89,13 @@ scissors.addEventListener("click", () => {
 		winner.innerHTML = "You Won!";
 		user.incrementScore();
 	}
+});
+
+resetBtn.addEventListener("click", () => {
+	userScore.innerHTML = 0;
+	robotScore.innerHTML = 0;
+	tieCount.innerHTML = 0;
+	robotChoice.innerHTML = "Mr. Robot chose:";
+	userChoice.innerHTML = "You chose:";
+	winner.innerHTML = "";
 });
