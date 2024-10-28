@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="game.css" />
+		<script src="game.js" defer></script>
+		<title>Rock Paper Scissors</title>
+	</head>
+	<body>
+		<div class="flex-wrapper">
+			<div class="player-wrapper">
+				<div id="bot">
+					<h2>Mr. Robot</h2>
+					<p id="robot-choice">Mr. Robot chose:</p>
+				</div>
+				<div class="user">
+					<h2 id="guest">Guest</h2>
+					<div class="button-container">
+						<button class="choice" id="rock">Rock</button>
+						<button class="choice" id="paper">Paper</button>
+						<button class="choice" id="scissors">Scissors</button>
+					</div>
+					<p id="user-choice">You chose:</p>
+				</div>
+			</div>
+			<table class="score-counter">
+				<tr>
+					<th>Mr. Robot's Score</th>
+					<td id="robot-score">0</td>
+				</tr>
+				<tr>
+					<th>Your Score</th>
+					<td id="user-score">0</td>
+				</tr>
+				<tr>
+					<th>Ties</th>
+					<td id="tie-count">0</td>
+				</tr>
+			</table>
+		</div>
+		<div class="reset-wrapper">
+			<button>Reset</button>
+		</div>
+		<div class="winner-message">
+			<h1>Who Won?</h1>
+			<p id="winner">The winner is:</p>
+		</div>
+	</body>
+</html>
