@@ -9,9 +9,10 @@ const userScore = document.getElementById("user-score");
 const tieCount = document.getElementById("tie-count");
 const resetBtn = document.getElementById("reset-btn");
 const playerName = document.getElementById("guest");
-const username = document.getElementById("username").value;
+const username = document.getElementById("username");
 const submitUsername = document.getElementById("submit-user");
 const continueAsGuest = document.getElementById("cont-guest");
+const modal = document.getElementById("modal");
 
 const robot = {
 	choices: ["Rock", "Paper", "Scissors"],
@@ -98,4 +99,22 @@ resetBtn.addEventListener("click", () => {
 	robotChoice.innerHTML = "Mr. Robot chose:";
 	userChoice.innerHTML = "You chose:";
 	winner.innerHTML = "";
+	playerName.innerHTML = "Guest";
+	openModal();
+});
+
+function openModal() {
+	modal.style.display = "block";
+}
+
+window.onload = openModal;
+
+continueAsGuest.addEventListener("click", () => {
+	modal.style.display = "none";
+});
+
+submitUsername.addEventListener("click", () => {
+	const usernameValue = username.value;
+	modal.style.display = "none";
+	playerName.innerHTML = usernameValue;
 });

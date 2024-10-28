@@ -86,16 +86,25 @@ body {
 }
 
 .winner-wrapper {
+	color: white;
 	display: flex;
 	justify-content: center;
 	margin: 50px;
 }
 
 .winner-message {
+	background-color: #3e195c5f;
+	border-radius: 15px;
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
 	text-align: center;
+	height: 150px;
+	width: 300px;
+}
+
+.winner-message p {
+	font-size: 20px;
 }
 
 .score-counter {
@@ -118,7 +127,7 @@ body {
 }
 
 .score-wrapper p {
-	font-size: 18px;
+	font-size: 20px;
 }
 
 #reset-btn {
@@ -142,7 +151,7 @@ body {
 }
 
 #modal {
-	display: ;
+	display: none;
 	background-color: rgb(232, 83, 83);
 	border-radius: 15px;
 	position: fixed;
@@ -172,11 +181,12 @@ body {
 	border-radius: 15px;
 	height: 30px;
 	border: none;
+	padding-left: 20px;
+	font-size: 16px;
 }
 
-#username::placeholder {
-	padding-left: 15px;
-	font-size: 16px;
+#username:focus {
+	outline: none;
 }
 
 .button-wrapper__modal {
