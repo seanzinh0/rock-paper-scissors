@@ -222,3 +222,7 @@ body {
 #cont-guest:hover {
 	background-color: #75affff8;
 }
+
+.blur {
+	filter: blur(5px);
+}

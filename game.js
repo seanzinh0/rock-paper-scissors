@@ -104,7 +104,9 @@ resetBtn.addEventListener("click", () => {
 });
 
 function openModal() {
+	const addBlur = document.getElementById("add-blur");
 	modal.style.display = "block";
+	addBlur.classList.add("blur");
 }
 
 window.onload = openModal;
