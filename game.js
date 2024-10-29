@@ -112,11 +112,15 @@ function openModal() {
 window.onload = openModal;
 
 continueAsGuest.addEventListener("click", () => {
+	const addBlur = document.getElementById("add-blur");
 	modal.style.display = "none";
+	addBlur.classList.remove("blur");
 });
 
 submitUsername.addEventListener("click", () => {
+	const addBlur = document.getElementById("add-blur");
 	const usernameValue = username.value;
 	modal.style.display = "none";
 	playerName.innerHTML = usernameValue;
+	addBlur.classList.remove("blur");
 });
