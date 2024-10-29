@@ -93,6 +93,8 @@ scissors.addEventListener("click", () => {
 });
 
 resetBtn.addEventListener("click", () => {
+	robot.score = 0;
+	user.score = 0;
 	userScore.innerHTML = 0;
 	robotScore.innerHTML = 0;
 	tieCount.innerHTML = 0;
