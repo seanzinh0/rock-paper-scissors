@@ -15,114 +15,116 @@ const continueAsGuest = document.getElementById("cont-guest");
 const modal = document.getElementById("modal");
 
 const robot = {
-	choices: ["Rock", "Paper", "Scissors"],
-	score: 0,
-	getChoice: function () {
-		let randomIndex = Math.floor(Math.random() * this.choices.length);
-		return this.choices[randomIndex];
-	},
-	incrementScore: function () {
-		this.score++;
-		robotScore.innerHTML = this.score;
-	},
+    choices: ["Rock", "Paper", "Scissors"],
+    score: 0,
+    getChoice: function () {
+        let randomIndex = Math.floor(Math.random() * this.choices.length);
+        return this.choices[randomIndex];
+    },
+    incrementScore: function () {
+        this.score++;
+        robotScore.innerHTML = this.score;
+    },
 };
 
 const user = {
-	score: 0,
-	incrementScore: function () {
-		this.score++;
-		userScore.innerHTML = this.score;
-	},
+    score: 0,
+    incrementScore: function () {
+        this.score++;
+        userScore.innerHTML = this.score;
+    },
 };
 
 let tie = 0;
+
 function incrementTie() {
-	tie++;
-	tieCount.innerHTML = tie;
+    tie++;
+    tieCount.innerHTML = tie;
 }
 
 rock.addEventListener("click", () => {
-	const userSelect = "Rock";
-	const robotSelect = robot.getChoice();
-	userChoice.innerHTML = "You chose: " + userSelect;
-	robotChoice.innerHTML = "Mr Robot chose: " + robotSelect;
-	if (userSelect === robotSelect) {
-		winner.innerHTML = "Tie";
-		incrementTie();
-	} else if (robotSelect === "Paper") {
-		winner.innerHTML = "Mr. Robot Won!";
-		robot.incrementScore();
-	} else {
-		winner.innerHTML = "You Won!";
-		user.incrementScore();
-	}
+    const userSelect = "Rock";
+    const robotSelect = robot.getChoice();
+    userChoice.innerHTML = "You chose: " + userSelect;
+    robotChoice.innerHTML = "Mr Robot chose: " + robotSelect;
+    if (userSelect === robotSelect) {
+        winner.innerHTML = "Tie";
+        incrementTie();
+    } else if (robotSelect === "Paper") {
+        winner.innerHTML = "Mr. Robot Won!";
+        robot.incrementScore();
+    } else {
+        winner.innerHTML = "You Won!";
+        user.incrementScore();
+    }
 });
 
 paper.addEventListener("click", () => {
-	const userSelect = "Paper";
-	const robotSelect = robot.getChoice();
-	userChoice.innerHTML = "You chose: " + userSelect;
-	robotChoice.innerHTML = "Mr Robot chose: " + robotSelect;
-	if (userSelect === robotSelect) {
-		winner.innerHTML = "Tie";
-		incrementTie();
-	} else if (robotSelect === "Scissors") {
-		winner.innerHTML = "Mr. Robot Won!";
-		robot.incrementScore();
-	} else {
-		winner.innerHTML = "You Won!";
-		user.incrementScore();
-	}
+    const userSelect = "Paper";
+    const robotSelect = robot.getChoice();
+    userChoice.innerHTML = "You chose: " + userSelect;
+    robotChoice.innerHTML = "Mr Robot chose: " + robotSelect;
+    if (userSelect === robotSelect) {
+        winner.innerHTML = "Tie";
+        incrementTie();
+    } else if (robotSelect === "Scissors") {
+        winner.innerHTML = "Mr. Robot Won!";
+        robot.incrementScore();
+    } else {
+        winner.innerHTML = "You Won!";
+        user.incrementScore();
+    }
 });
 
 scissors.addEventListener("click", () => {
-	const userSelect = "Scissors";
-	const robotSelect = robot.getChoice();
-	userChoice.innerHTML = "You chose: " + userSelect;
-	robotChoice.innerHTML = "Mr Robot chose: " + robotSelect;
-	if (userSelect === robotSelect) {
-		winner.innerHTML = "Tie";
-		incrementTie();
-	} else if (robotSelect === "Rock") {
-		winner.innerHTML = "Mr. Robot Won!";
-		robot.incrementScore();
-	} else {
-		winner.innerHTML = "You Won!";
-		user.incrementScore();
-	}
+    const userSelect = "Scissors";
+    const robotSelect = robot.getChoice();
+    userChoice.innerHTML = "You chose: " + userSelect;
+    robotChoice.innerHTML = "Mr Robot chose: " + robotSelect;
+    if (userSelect === robotSelect) {
+        winner.innerHTML = "Tie";
+        incrementTie();
+    } else if (robotSelect === "Rock") {
+        winner.innerHTML = "Mr. Robot Won!";
+        robot.incrementScore();
+    } else {
+        winner.innerHTML = "You Won!";
+        user.incrementScore();
+    }
 });
 
 resetBtn.addEventListener("click", () => {
-	robot.score = 0;
-	user.score = 0;
-	userScore.innerHTML = 0;
-	robotScore.innerHTML = 0;
-	tieCount.innerHTML = 0;
-	robotChoice.innerHTML = "Mr. Robot chose:";
-	userChoice.innerHTML = "You chose:";
-	winner.innerHTML = "";
-	playerName.innerHTML = "Guest";
-	openModal();
+    robot.score = 0;
+    user.score = 0;
+    tie = 0;
+    userScore.innerHTML = 0;
+    robotScore.innerHTML = 0;
+    tieCount.innerHTML = 0;
+    robotChoice.innerHTML = "Mr. Robot chose:";
+    userChoice.innerHTML = "You chose:";
+    winner.innerHTML = "";
+    playerName.innerHTML = "Guest";
+    openModal();
 });
 
 function openModal() {
-	const addBlur = document.getElementById("add-blur");
-	modal.style.display = "block";
-	addBlur.classList.add("blur");
+    const addBlur = document.getElementById("add-blur");
+    modal.style.display = "block";
+    addBlur.classList.add("blur");
 }
 
 window.onload = openModal;
 
 continueAsGuest.addEventListener("click", () => {
-	const addBlur = document.getElementById("add-blur");
-	modal.style.display = "none";
-	addBlur.classList.remove("blur");
+    const addBlur = document.getElementById("add-blur");
+    modal.style.display = "none";
+    addBlur.classList.remove("blur");
 });
 
 submitUsername.addEventListener("click", () => {
-	const addBlur = document.getElementById("add-blur");
-	const usernameValue = username.value;
-	modal.style.display = "none";
-	playerName.innerHTML = usernameValue;
-	addBlur.classList.remove("blur");
+    const addBlur = document.getElementById("add-blur");
+    const usernameValue = username.value;
+    modal.style.display = "none";
+    playerName.innerHTML = usernameValue;
+    addBlur.classList.remove("blur");
 });
