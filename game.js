@@ -1,3 +1,5 @@
+"use strict"
+
 const rock = document.getElementById("rock");
 const paper = document.getElementById("paper");
 const scissors = document.getElementById("scissors");
@@ -14,6 +16,12 @@ const submitUsername = document.getElementById("submit-user");
 const continueAsGuest = document.getElementById("cont-guest");
 const modal = document.getElementById("modal");
 
+/**
+ *Robot object
+ *Contains choices and score properties with two methods
+ *getChoice takes a random index at the length of the choices array to get a random choice
+ *incrementScore increments robot's score
+ */
 const robot = {
     choices: ["Rock", "Paper", "Scissors"],
     score: 0,
@@ -27,6 +35,11 @@ const robot = {
     },
 };
 
+/**
+ *User object
+ *Score is the only property
+ *incrementScore method that increments user's score
+ */
 const user = {
     score: 0,
     incrementScore: function () {
@@ -35,8 +48,10 @@ const user = {
     },
 };
 
+//Initialize tie variable and set to 0
 let tie = 0;
 
+//Increment function to increment tie value
 function incrementTie() {
     tie++;
     tieCount.innerHTML = tie;
