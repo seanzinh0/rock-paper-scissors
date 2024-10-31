@@ -8,7 +8,6 @@
 body {
     background-image: linear-gradient(#af6dbfa3, #7fd4f2);
     background-repeat: no-repeat;
-    height: 100vh;
 }
 
 .title {
@@ -21,7 +20,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-top: 150px;
+    margin-top: 50px;
     gap: 80px;
 }
 
@@ -229,4 +228,24 @@ label {
 
 .blur {
     filter: blur(5px);
+}
+
+footer {
+    height: 40vh;
+}
+
+@media screen and (max-width: 1200px) {
+    .flex-wrapper {
+        flex-direction: column;
+        gap: 25px;
+        margin-top: 15px;
+    }
+
+    .player-wrapper {
+        align-self: center;
+    }
+
+    .score-counter {
+        align-self: center;
+    }
 }
