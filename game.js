@@ -1,5 +1,6 @@
 "use strict"
 
+//initialize variables used for DOM manipulation
 const rock = document.getElementById("rock");
 const paper = document.getElementById("paper");
 const scissors = document.getElementById("scissors");
@@ -57,6 +58,12 @@ function incrementTie() {
     tieCount.innerHTML = tie;
 }
 
+/**
+ *EventListener added onto the rock button
+ * On Click the event listener calls a function that takes the users input and robots choice
+ * and has a series of conditionals to see what is stronger than the selected choice
+ * based on the result the robot score, user score, or tie will increment
+ */
 rock.addEventListener("click", () => {
     const userSelect = "Rock";
     const robotSelect = robot.getChoice();
@@ -74,6 +81,12 @@ rock.addEventListener("click", () => {
     }
 });
 
+/**
+ *EventListener added onto the paper button
+ * On Click the event listener calls a function that takes the users input and robots choice
+ * and has a series of conditionals to see what is stronger than the selected choice
+ * based on the result the robot score, user score, or tie will increment
+ */
 paper.addEventListener("click", () => {
     const userSelect = "Paper";
     const robotSelect = robot.getChoice();
@@ -91,6 +104,12 @@ paper.addEventListener("click", () => {
     }
 });
 
+/**
+ *EventListener added onto the scissors button
+ * On Click the event listener calls a function that takes the users input and robots choice
+ * and has a series of conditionals to see what is stronger than the selected choice
+ * based on the result the robot score, user score, or tie will increment
+ */
 scissors.addEventListener("click", () => {
     const userSelect = "Scissors";
     const robotSelect = robot.getChoice();
@@ -108,6 +127,19 @@ scissors.addEventListener("click", () => {
     }
 });
 
+//function that opens up modal and blurs background also disables any user select
+function openModal() {
+    const addBlur = document.getElementById("add-blur");
+    modal.style.display = "block";
+    addBlur.classList.add("blur");
+}
+
+/**
+ *Event Listener added onto the reset button
+ *On Click calls a function that resets object scores back to zero
+ *resets all the html for scores as well and resets username
+ *opens the modal as well
+ */
 resetBtn.addEventListener("click", () => {
     robot.score = 0;
     user.score = 0;
@@ -122,20 +154,26 @@ resetBtn.addEventListener("click", () => {
     openModal();
 });
 
-function openModal() {
-    const addBlur = document.getElementById("add-blur");
-    modal.style.display = "block";
-    addBlur.classList.add("blur");
-}
-
+//when page is initialized or reset modal is open
 window.onload = openModal;
 
+/**
+ *Event Listener add onto the continue as guest button
+ *calls a function when clicked that removes background blur class from the background
+ *sets modal display to none
+ */
 continueAsGuest.addEventListener("click", () => {
     const addBlur = document.getElementById("add-blur");
     modal.style.display = "none";
     addBlur.classList.remove("blur");
 });
 
+/**
+ *Event Listener add onto the submit username button
+ *replaces the inner html for username to inputted username
+ *calls a function when clicked that removes background blur class from the background
+ *sets modal display to none
+ */
 submitUsername.addEventListener("click", () => {
     const addBlur = document.getElementById("add-blur");
     const usernameValue = username.value;

@@ -8,7 +8,6 @@
     <title>Rock Paper Scissors</title>
 </head>
 <body>
-<h1 class="title">Rock Paper Scissors</h1>
 <div class="modal-flex">
     <div id="modal">
         <div class="username-input">
@@ -23,53 +22,58 @@
     </div>
 </div>
 <div id="add-blur">
-    <div class="winner-wrapper">
-        <div class="winner-message">
-            <h1>Who Won?</h1>
-            <p id="winner"></p>
-        </div>
-    </div>
-    <div class="flex-wrapper">
-        <div class="player-wrapper">
-            <div id="bot">
-                <h2>Mr. Robot</h2>
-                <p id="robot-choice">Mr. Robot chose:</p>
+
+    <div class="main-content">
+        <h1 class="title">Rock Paper Scissors</h1>
+        <div class="winner-wrapper">
+            <div class="winner-message">
+                <h1>Who Won?</h1>
+                <p id="winner"></p>
             </div>
-            <div class="user">
-                <h2 id="guest">Guest</h2>
-                <div class="button-container">
-                    <button class="choice" id="rock">Rock</button>
-                    <button class="choice" id="paper">Paper</button>
-                    <button class="choice" id="scissors">Scissors</button>
+        </div>
+
+        <div class="flex-wrapper">
+            <div class="player-wrapper">
+                <div id="bot">
+                    <h2>Mr. Robot</h2>
+                    <p id="robot-choice">Mr. Robot chose:</p>
                 </div>
-                <p id="user-choice">You chose:</p>
+                <div class="user">
+                    <h2 id="guest">Guest</h2>
+                    <div class="button-container">
+                        <button class="choice" id="rock">Rock</button>
+                        <button class="choice" id="paper">Paper</button>
+                        <button class="choice" id="scissors">Scissors</button>
+                    </div>
+                    <p id="user-choice">You chose:</p>
+                </div>
+            </div>
+            <div class="score-counter">
+                <div class="score-wrapper">
+                    <h2>Mr. Robot's Score:</h2>
+                    <p id="robot-score">0</p>
+                </div>
+                <div class="score-wrapper">
+                    <h2>Your Score:</h2>
+                    <p id="user-score">0</p>
+                </div>
+                <div class="score-wrapper">
+                    <h2>Ties:</h2>
+                    <p id="tie-count">0</p>
+                </div>
             </div>
         </div>
-        <div class="score-counter">
-            <div class="score-wrapper">
-                <h2>Mr. Robot's Score:</h2>
-                <p id="robot-score">0</p>
-            </div>
-            <div class="score-wrapper">
-                <h2>Your Score:</h2>
-                <p id="user-score">0</p>
-            </div>
-            <div class="score-wrapper">
-                <h2>Ties:</h2>
-                <p id="tie-count">0</p>
-            </div>
+        <div class="reset-wrapper">
+            <button id="reset-btn">Reset</button>
         </div>
+        <!--    <div class="winner-wrapper">-->
+        <!--        <div class="winner-message">-->
+        <!--            <h1>Who Won?</h1>-->
+        <!--            <p id="winner"></p>-->
+        <!--        </div>-->
+        <!--    </div>-->
     </div>
-    <div class="reset-wrapper">
-        <button id="reset-btn">Reset</button>
-    </div>
-    <!--    <div class="winner-wrapper">-->
-    <!--        <div class="winner-message">-->
-    <!--            <h1>Who Won?</h1>-->
-    <!--            <p id="winner"></p>-->
-    <!--        </div>-->
-    <!--    </div>-->
 </div>
-<footer></footer>
+<!--<footer></footer>-->
 </body>
 </html>

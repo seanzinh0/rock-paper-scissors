@@ -8,6 +8,7 @@
 body {
     background-image: linear-gradient(#af6dbfa3, #7fd4f2);
     background-repeat: no-repeat;
+    min-height: 100vh;
 }
 
 .title {
@@ -229,6 +230,13 @@ label {
 .blur {
     filter: blur(5px);
 }
+
+.blur .main-content {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 
 footer {
     height: 40vh;
