@@ -165,7 +165,6 @@ window.onload = openModal;
  */
 continueAsGuest.addEventListener("click", () => {
     const addBlur = document.getElementById("add-blur");
-    // modal.style.display = "none";
     const hideModal = document.querySelector(".hidden");
     hideModal.classList.add("hide");
     addBlur.classList.remove("blur");
