@@ -202,21 +202,23 @@ label {
 #submit-user {
     color: white;
     background-color: #75afffd2;
-    height: 50px;
-    width: 100px;
+    height: 70px;
+    width: 125px;
     font-size: 16px;
     border: none;
     border-radius: 15px;
+    padding: 10px;
 }
 
 #cont-guest {
     color: white;
     background-color: #75afffd2;
-    height: 50px;
-    width: 100px;
+    height: 70px;
+    width: 125px;
     font-size: 16px;
     border: none;
     border-radius: 15px;
+    padding: 10px;
 }
 
 #submit-user:hover {
@@ -236,7 +238,6 @@ label {
     -ms-user-select: none;
     user-select: none;
 }
-
 
 footer {
     height: 40vh;
