@@ -151,7 +151,7 @@ body {
 }
 
 #modal {
-    display: none;
+    display: block;
     background-color: rgb(232, 83, 83);
     border-radius: 15px;
     position: fixed;
@@ -237,6 +237,10 @@ label {
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+.hide {
+    display: none;
 }
 
 footer {

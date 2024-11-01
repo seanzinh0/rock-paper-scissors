@@ -130,7 +130,8 @@ scissors.addEventListener("click", () => {
 //function that opens up modal and blurs background also disables any user select
 function openModal() {
     const addBlur = document.getElementById("add-blur");
-    modal.style.display = "block";
+    const hideModal = document.querySelector(".hidden");
+    hideModal.classList.remove("hide");
     addBlur.classList.add("blur");
 }
 
@@ -164,7 +165,9 @@ window.onload = openModal;
  */
 continueAsGuest.addEventListener("click", () => {
     const addBlur = document.getElementById("add-blur");
-    modal.style.display = "none";
+    // modal.style.display = "none";
+    const hideModal = document.querySelector(".hidden");
+    hideModal.classList.add("hide");
     addBlur.classList.remove("blur");
 });
 
@@ -177,7 +180,8 @@ continueAsGuest.addEventListener("click", () => {
 submitUsername.addEventListener("click", () => {
     const addBlur = document.getElementById("add-blur");
     const usernameValue = username.value;
-    modal.style.display = "none";
+    const hideModal = document.querySelector(".hidden");
+    hideModal.classList.add("hide");
     playerName.innerHTML = usernameValue;
     addBlur.classList.remove("blur");
 });
