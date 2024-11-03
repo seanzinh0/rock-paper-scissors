@@ -15,7 +15,6 @@ const playerName = document.getElementById("guest");
 const username = document.getElementById("username");
 const submitUsername = document.getElementById("submit-user");
 const continueAsGuest = document.getElementById("cont-guest");
-const modal = document.getElementById("modal");
 
 /**
  *Robot object
